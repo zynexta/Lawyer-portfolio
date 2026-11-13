@@ -1,0 +1,161 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-emerald-deep: #003C32;
+    --color-emerald-dark: #00241E;
+    --color-forest-dark: #001F1B;
+    --color-ivory-warm: #F6F0E5;
+    --color-ivory-card: #FAF6EE;
+    --color-gold-champagne: #D6AD69;
+    --color-gold-hover: #C59C58;
+    --color-text-dark: #171717;
+    --color-text-muted: #5A5A5A;
+  }
+
+  body {
+    background-color: #001F1B;
+    color: #171717;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+/* Custom Typography Helpers */
+.font-editorial {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+.font-playfair {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-body {
+  font-family: 'Inter', sans-serif;
+}
+
+/* Hide scrollbar for clean horizontal swipe containers */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom selection */
+::selection {
+  background: #D6AD69;
+  color: #001F1B;
+}
+
+/* Subtle luxury card shadow */
+.card-shadow-subtle {
+  box-shadow: 0 4px 20px -2px rgba(0, 0, 0, 0.05), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.card-shadow-emerald {
+  box-shadow: 0 10px 30px -5px rgba(0, 31, 27, 0.35);
+}
+
+/* Mobile-optimized tap highlights & touch targets */
+@media (max-width: 767px) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  /* Ensure smooth scrolling on mobile */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   PREMIUM IVORY PAPER & FLOWING WAVE TEXTURE FOR SERVICE CARDS
+   ═══════════════════════════════════════════════════════════════════════ */
+.service-card-lux {
+  position: relative;
+  background-color: #FAF7F0;
+  background-image: 
+    /* Subtle organic paper grain texture */
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.08'/%3E%3C/svg%3E"),
+    /* Top-right soft ambient radial glow */
+    radial-gradient(ellipse 260px 180px at 100% 0%, rgba(236, 227, 214, 0.45) 0%, transparent 70%),
+    /* Bottom-right ambient dune glow */
+    radial-gradient(ellipse 280px 220px at 100% 100%, rgba(230, 218, 202, 0.5) 0%, transparent 65%),
+    /* Base ivory wash */
+    linear-gradient(145deg, #FCF9F3 0%, #FAF6EE 55%, #F4ECE0 100%);
+  border: 1px solid rgba(220, 210, 195, 0.75);
+  box-shadow: 
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.4),
+    0 4px 16px -2px rgba(180, 160, 130, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.03);
+}
+
+/* Top-right decorative translucent arc (::before) */
+.service-card-lux::before {
+  content: '';
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 65% 35%, transparent 52%, rgba(232, 220, 204, 0.45) 54%, rgba(242, 234, 222, 0.15) 72%, transparent 78%);
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Bottom-right decorative curved wave layer (::after) */
+.service-card-lux::after {
+  content: '';
+  position: absolute;
+  bottom: -40px;
+  right: -30px;
+  width: 250px;
+  height: 210px;
+  border-radius: 65% 35% 70% 30% / 45% 65% 35% 55%;
+  background: radial-gradient(ellipse at 80% 80%, rgba(222, 208, 188, 0.45) 0%, rgba(236, 225, 210, 0.25) 55%, transparent 75%);
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Flowing wave contours SVG layer */
+.service-card-lux .card-waves-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+  transition: opacity 0.3s ease-out;
+}
+
+/* Fade out paper textures smoothly on hover when emerald crossfade activates */
+.service-card-lux:hover::before,
+.service-card-lux:hover::after,
+.service-card-lux:hover .card-waves-svg,
+.service-card-lux:focus-visible::before,
+.service-card-lux:focus-visible::after,
+.service-card-lux:focus-visible .card-waves-svg {
+  opacity: 0.12;
+}
+
+@media (max-width: 767px) {
+  .service-card-lux::before {
+    width: 150px;
+    height: 150px;
+    top: -20px;
+    right: -20px;
+  }
+  .service-card-lux::after {
+    width: 200px;
+    height: 170px;
+    bottom: -30px;
+    right: -20px;
+  }
+}
