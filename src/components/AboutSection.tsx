@@ -67,15 +67,18 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenAboutModal }) 
               <div className="w-44 h-44 min-[360px]:w-52 min-[360px]:h-52 sm:w-64 sm:h-64 lg:w-72 lg:h-72 rounded-full border-2 border-[#D6AD69] p-1.5 sm:p-2 bg-[#F6F0E5] shadow-[0_12px_32px_rgba(214,173,105,0.25)]">
                 {/* Dark Green Circular Background Behind Portrait */}
                 <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-b from-[#003C32] to-[#001F1B] relative">
-                  <img
-                    src="/advocate-real.jpg"
-                    alt="Adv. Muhammad Ajmal KTV - Advocate High Court of Kerala"
-                    className="w-full h-full object-cover object-[50%_20%] transition-transform duration-700 group-hover:scale-105"
-                    loading="lazy"
-                    decoding="async"
-                    width={288}
-                    height={288}
-                  />
+                  <picture>
+                    <source type="image/webp" srcSet="/advocate-real.webp" />
+                    <img
+                      src="/advocate-real.jpg"
+                      alt="Adv. Muhammad Ajmal KTV - Advocate High Court of Kerala"
+                      className="w-full h-full object-cover object-[50%_20%] transition-transform duration-700 group-hover:scale-105"
+                      loading="lazy"
+                      decoding="async"
+                      width={288}
+                      height={288}
+                    />
+                  </picture>
                 </div>
               </div>
 

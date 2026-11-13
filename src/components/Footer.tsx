@@ -94,13 +94,19 @@ export const Footer: React.FC<FooterProps> = ({
 
         {/* Desktop Faint Classical Scales of Justice Graphic on Right */}
         <div className="absolute right-0 top-0 bottom-0 w-1/2 pointer-events-none overflow-hidden hidden lg:block opacity-20 mix-blend-screen select-none">
-          <img
-            src="/cta-scales.jpg"
-            alt=""
-            aria-hidden="true"
-            className="w-full h-full object-cover object-center filter saturate-150 contrast-125"
-            loading="lazy"
-          />
+          <picture>
+            <source type="image/webp" srcSet="/cta-scales.webp" />
+            <img
+              src="/cta-scales.jpg"
+              alt=""
+              aria-hidden="true"
+              className="w-full h-full object-cover object-center filter saturate-150 contrast-125"
+              loading="lazy"
+              decoding="async"
+              width={640}
+              height={480}
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-r from-[#00201B] via-[#00201B]/70 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#001714] via-transparent to-[#002822]" />
         </div>

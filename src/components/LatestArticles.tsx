@@ -88,15 +88,18 @@ export const LatestArticles: React.FC<LatestArticlesProps> = ({
                   <div>
                     {/* Landscape Thumbnail - Full Width within Card with subtle zoom effect */}
                     <div className="relative overflow-hidden rounded-xl bg-neutral-900 aspect-[16/10] mb-3">
-                      <img
-                        src={article.image}
-                        alt={article.title}
-                        className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 group-active:scale-105"
-                        loading="lazy"
-                        decoding="async"
-                        width={400}
-                        height={250}
-                      />
+                      <picture>
+                        <source type="image/webp" srcSet={article.image} />
+                        <img
+                          src={article.image.replace(/\.webp$/, '.jpg')}
+                          alt={article.title}
+                          className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-105 group-active:scale-105"
+                          loading="lazy"
+                          decoding="async"
+                          width={400}
+                          height={250}
+                        />
+                      </picture>
                       <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-transparent to-transparent pointer-events-none" />
                     </div>
 

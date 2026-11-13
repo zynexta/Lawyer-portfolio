@@ -211,7 +211,7 @@ export const articlesData: Article[] = [
     date: 'February 2026',
     readTime: '5 MIN READ',
     category: 'Property Law',
-    image: '/article-gavel.jpg',
+    image: '/article-gavel.webp',
     content: [
       'Purchasing real estate represents one of the most substantial financial decisions for individuals and businesses. Prior to executing any sale deed or paying advance amounts, thorough legal verification of the parent title deed across a minimum 30-year span is imperative.',
       'Always inspect the Encumbrance Certificate (EC) from the Sub-Registrar Office, verify land tax receipts, and ensure the property is free from prior mortgages, lis pendens attachments, or acquisition proceedings under the Land Acquisition Act.',
@@ -225,7 +225,7 @@ export const articlesData: Article[] = [
     date: 'January 2026',
     readTime: '4 MIN READ',
     category: 'Criminal Law',
-    image: '/article-pillars.jpg',
+    image: '/article-pillars.webp',
     content: [
       'The foundational bedrock of Indian criminal law, reiterated continuously by the Supreme Court, is that bail is the rule and jail is the exception under Article 21 of the Constitution.',
       'Anticipatory bail protects individuals apprehending arrest in non-bailable offences, while regular bail applies once an individual is in judicial custody. Additionally, Default Bail under Section 167(2) CrPC / Section 187 BNSS is an indefeasible fundamental right if the police fail to file a final report within the statutory timeframe.',
@@ -239,7 +239,7 @@ export const articlesData: Article[] = [
     date: 'December 2025',
     readTime: '6 MIN READ',
     category: 'Civil Law',
-    image: '/article-books.jpg',
+    image: '/article-books.webp',
     content: [
       'Civil litigation demands meticulous evidentiary preparation from the very first correspondence. Before instituting a suit, a structured statutory demand notice crystallizes the legal dispute and sets firm timelines.',
       'When an urgent threat to property or contractual rights arises, Order 39 of the Code of Civil Procedure empowers civil courts to grant ad-interim temporary injunctions to preserve the status quo.',

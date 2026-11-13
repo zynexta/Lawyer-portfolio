@@ -42,11 +42,16 @@ export const VideoModal: React.FC<VideoModalProps> = ({
         {/* Video Screen / Cinematic Presentation */}
         <div className="relative aspect-video bg-[#121212] overflow-hidden group">
           {/* Background image & mood */}
-          <img
-            src="/advocate-portrait.jpg"
-            alt="Adv. Muhammad Ajmal KTV Chamber Intro"
-            className="w-full h-full object-cover grayscale brightness-75 contrast-125"
-          />
+          <picture>
+            <source type="image/webp" srcSet="/advocate-portrait.webp" />
+            <img
+              src="/advocate-portrait.jpg"
+              alt="Adv. Muhammad Ajmal KTV Chamber Intro"
+              className="w-full h-full object-cover grayscale brightness-75 contrast-125"
+              width={800}
+              height={450}
+            />
+          </picture>
 
           <div className="absolute inset-0 bg-gradient-to-t from-[#0B0B0B] via-black/40 to-black/20" />
 

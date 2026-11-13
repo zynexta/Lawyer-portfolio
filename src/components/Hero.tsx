@@ -32,15 +32,19 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onOpenVideo }) =
           transition={{ duration: 0.65, ease: 'easeOut' }}
           className="relative w-full overflow-hidden"
         >
-          <img
-            src="/advocate-desk-portrait.jpg"
-            alt="Adv. Muhammad Ajmal KTV - Advocate & Legal Consultant"
-            className="w-full h-auto max-h-[350px] min-[390px]:max-h-[385px] min-[430px]:max-h-[420px] object-cover object-top block select-none pointer-events-none"
-            loading="eager"
-            decoding="async"
-            width={576}
-            height={1024}
-          />
+          <picture>
+            <source type="image/webp" srcSet="/advocate-desk-portrait.webp" />
+            <img
+              src="/advocate-desk-portrait.jpg"
+              alt="Adv. Muhammad Ajmal KTV - Advocate & Legal Consultant"
+              className="w-full h-auto max-h-[350px] min-[390px]:max-h-[385px] min-[430px]:max-h-[420px] object-cover object-top block select-none pointer-events-none"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+              width={576}
+              height={1024}
+            />
+          </picture>
 
           {/* Smooth gradient blending at the bottom of the portrait into deep emerald background */}
           <div className="absolute inset-x-0 bottom-0 h-24 min-[390px]:h-28 bg-gradient-to-t from-[#001F1B] via-[#001F1B]/80 to-transparent pointer-events-none" />
@@ -143,7 +147,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onOpenVideo }) =
         <div
           className="hidden lg:block absolute inset-0 z-0 bg-no-repeat pointer-events-none bg-[right_center]"
           style={{
-            backgroundImage: "url('/hero-bg.jpg?v=10')",
+            backgroundImage: "url('/hero-bg.webp')",
             backgroundSize: 'cover',
             backgroundRepeat: 'no-repeat',
           }}
@@ -169,15 +173,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onOpenVideo }) =
             {/* Tablet Portrait (md to lg): Stacked at top */}
             <div className="lg:hidden select-none order-1 w-full max-w-md mx-auto mb-4">
               <div className="relative w-full overflow-hidden">
-                <img
-                  src="/hero-mobile.jpg"
-                  alt="Adv. Muhammad Ajmal KTV - Advocate & Legal Consultant"
-                  className="w-full h-auto object-cover select-none pointer-events-none block"
-                  loading="eager"
-                  decoding="async"
-                  width={750}
-                  height={750}
-                />
+                <picture>
+                  <source type="image/webp" srcSet="/hero-mobile.webp" />
+                  <img
+                    src="/hero-mobile.jpg"
+                    alt="Adv. Muhammad Ajmal KTV - Advocate & Legal Consultant"
+                    className="w-full h-auto object-cover select-none pointer-events-none block"
+                    loading="eager"
+                    decoding="async"
+                    width={750}
+                    height={750}
+                  />
+                </picture>
                 <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#001F1B] via-[#001F1B]/60 to-transparent pointer-events-none" />
               </div>
             </div>

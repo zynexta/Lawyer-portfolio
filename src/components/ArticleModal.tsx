@@ -21,11 +21,16 @@ export const ArticleModal: React.FC<ArticleModalProps> = ({
         
         {/* Top Image Banner */}
         <div className="relative aspect-[21/9] bg-[#00241E] overflow-hidden">
-          <img
-            src={article.image}
-            alt={article.title}
-            className="w-full h-full object-cover"
-          />
+          <picture>
+            <source type="image/webp" srcSet={article.image} />
+            <img
+              src={article.image.replace(/\.webp$/, '.jpg')}
+              alt={article.title}
+              className="w-full h-full object-cover"
+              width={800}
+              height={340}
+            />
+          </picture>
           <div className="absolute inset-0 bg-gradient-to-t from-[#001F1B] to-transparent" />
 
           {/* Close button */}

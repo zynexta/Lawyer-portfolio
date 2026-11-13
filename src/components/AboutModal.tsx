@@ -49,11 +49,16 @@ export const AboutModal: React.FC<AboutModalProps> = ({
         {/* Header */}
         <div className="flex items-center gap-4 mb-6">
           <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-[#D6AD69] shrink-0 bg-[#00241E] shadow-sm">
-            <img
-              src="/advocate-real.jpg"
-              alt="Adv. Muhammad Ajmal KTV"
-              className="w-full h-full object-cover object-[50%_25%]"
-            />
+            <picture>
+              <source type="image/webp" srcSet="/advocate-real.webp" />
+              <img
+                src="/advocate-real.jpg"
+                alt="Adv. Muhammad Ajmal KTV"
+                className="w-full h-full object-cover object-[50%_25%]"
+                width={64}
+                height={64}
+              />
+            </picture>
           </div>
 
           <div>

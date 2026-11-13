@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { PracticeAreas } from './components/PracticeAreas';
@@ -9,11 +9,23 @@ import { LatestArticles } from './components/LatestArticles';
 import { Footer } from './components/Footer';
 import { MobileControlBar } from './components/MobileControlBar';
 import { WhatsAppButton } from './components/WhatsAppButton';
-import { ConsultationModal } from './components/ConsultationModal';
-import { VideoModal } from './components/VideoModal';
-import { PracticeModal } from './components/PracticeModal';
-import { ArticleModal } from './components/ArticleModal';
-import { AboutModal } from './components/AboutModal';
+
+// Dynamic imports for modals to minimize initial bundle size and critical render path
+const ConsultationModal = lazy(() =>
+  import('./components/ConsultationModal').then((m) => ({ default: m.ConsultationModal }))
+);
+const VideoModal = lazy(() =>
+  import('./components/VideoModal').then((m) => ({ default: m.VideoModal }))
+);
+const PracticeModal = lazy(() =>
+  import('./components/PracticeModal').then((m) => ({ default: m.PracticeModal }))
+);
+const ArticleModal = lazy(() =>
+  import('./components/ArticleModal').then((m) => ({ default: m.ArticleModal }))
+);
+const AboutModal = lazy(() =>
+  import('./components/AboutModal').then((m) => ({ default: m.AboutModal }))
+);
 
 import {
   practiceAreasData,
@@ -89,36 +101,48 @@ export default function App() {
         <WhatsAppButton />
       </div>
 
-      {/* Interactive Modals */}
-      <ConsultationModal
-        isOpen={isConsultationOpen}
-        onClose={() => setIsConsultationOpen(false)}
-        preselectedPracticeArea={consultationArea}
-      />
+      {/* Interactive Modals (Code-Split & Suspended) */}
+      <Suspense fallback={null}>
+        {isConsultationOpen && (
+          <ConsultationModal
+            isOpen={isConsultationOpen}
+            onClose={() => setIsConsultationOpen(false)}
+            preselectedPracticeArea={consultationArea}
+          />
+        )}
 
-      <VideoModal
-        isOpen={isVideoOpen}
-        onClose={() => setIsVideoOpen(false)}
-        onOpenConsultation={() => handleOpenConsultation()}
-      />
+        {isVideoOpen && (
+          <VideoModal
+            isOpen={isVideoOpen}
+            onClose={() => setIsVideoOpen(false)}
+            onOpenConsultation={() => handleOpenConsultation()}
+          />
+        )}
 
-      <PracticeModal
-        practiceArea={selectedPracticeArea}
-        onClose={() => setSelectedPracticeArea(null)}
-        onOpenConsultationWithArea={(areaTitle) => handleOpenConsultation(areaTitle)}
-      />
+        {selectedPracticeArea && (
+          <PracticeModal
+            practiceArea={selectedPracticeArea}
+            onClose={() => setSelectedPracticeArea(null)}
+            onOpenConsultationWithArea={(areaTitle) => handleOpenConsultation(areaTitle)}
+          />
+        )}
 
-      <ArticleModal
-        article={selectedArticle}
-        onClose={() => setSelectedArticle(null)}
-        onOpenConsultation={() => handleOpenConsultation()}
-      />
+        {selectedArticle && (
+          <ArticleModal
+            article={selectedArticle}
+            onClose={() => setSelectedArticle(null)}
+            onOpenConsultation={() => handleOpenConsultation()}
+          />
+        )}
 
-      <AboutModal
-        isOpen={isAboutModalOpen}
-        onClose={() => setIsAboutModalOpen(false)}
-        onOpenConsultation={() => handleOpenConsultation()}
-      />
+        {isAboutModalOpen && (
+          <AboutModal
+            isOpen={isAboutModalOpen}
+            onClose={() => setIsAboutModalOpen(false)}
+            onOpenConsultation={() => handleOpenConsultation()}
+          />
+        )}
+      </Suspense>
     </>
   );
 }

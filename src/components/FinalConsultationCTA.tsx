@@ -21,15 +21,18 @@ export const FinalConsultationCTA: React.FC<FinalConsultationCTAProps> = ({
           
           {/* Left Column: Premium Legal Library Image with Golden Scales of Justice */}
           <div className="lg:col-span-5 relative rounded-2xl overflow-hidden aspect-[16/10] sm:aspect-[4/3] shadow-md sm:shadow-[0_12px_30px_rgba(0,0,0,0.5)] border border-[#D6AD69]/30">
-            <img
-              src="/cta-scales.jpg"
-              alt="Golden Scales of Justice on Classical Law Desk"
-              className="w-full h-full object-cover"
-              loading="lazy"
-              decoding="async"
-              width={640}
-              height={480}
-            />
+            <picture>
+              <source type="image/webp" srcSet="/cta-scales.webp" />
+              <img
+                src="/cta-scales.jpg"
+                alt="Golden Scales of Justice on Classical Law Desk"
+                className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
+                width={640}
+                height={480}
+              />
+            </picture>
             {/* Subtle Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-tr from-[#001F1B]/40 via-transparent to-transparent pointer-events-none" />
           </div>
