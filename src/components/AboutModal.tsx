@@ -101,7 +101,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({
             <Shield className="w-5 h-5 text-[#8C7A65] shrink-0 mt-0.5" />
             <div>
               <span className="text-[11.5px] font-sans font-semibold text-[#0B0B0B] block">Bar Enrollment</span>
-              <span className="text-[10.5px] text-neutral-600">Bar Council of Kerala (Roll No. K/1842/2016)</span>
+              <span className="text-[10.5px] text-neutral-600">Bar Council of Kerala (Roll No. K/3597/2026)</span>
             </div>
           </div>
 
