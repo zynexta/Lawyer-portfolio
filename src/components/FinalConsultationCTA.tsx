@@ -27,6 +27,8 @@ export const FinalConsultationCTA: React.FC<FinalConsultationCTAProps> = ({
               className="w-full h-full object-cover"
               loading="lazy"
               decoding="async"
+              width={640}
+              height={480}
             />
             {/* Subtle Gradient Overlay */}
             <div className="absolute inset-0 bg-gradient-to-tr from-[#001F1B]/40 via-transparent to-transparent pointer-events-none" />

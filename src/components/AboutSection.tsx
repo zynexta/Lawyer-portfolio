@@ -69,10 +69,12 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenAboutModal }) 
                 <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-b from-[#003C32] to-[#001F1B] relative">
                   <img
                     src="/advocate-real.jpg"
-                    alt="Adv. Muhammad Ajmal KTV - Advocate High Court"
+                    alt="Adv. Muhammad Ajmal KTV - Advocate High Court of Kerala"
                     className="w-full h-full object-cover object-[50%_20%] transition-transform duration-700 group-hover:scale-105"
                     loading="lazy"
                     decoding="async"
+                    width={288}
+                    height={288}
                   />
                 </div>
               </div>

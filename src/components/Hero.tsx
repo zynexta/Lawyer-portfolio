@@ -70,6 +70,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onOpenVideo }) =
             transition={{ duration: 0.55, delay: 0.25, ease: [0.22, 1, 0.36, 1] }}
             className="font-editorial text-center text-[28px] min-[360px]:text-[31px] min-[390px]:text-[34px] leading-[1.14] tracking-tight mb-2 sm:mb-2.5"
           >
+            <span className="sr-only">Adv. Muhammad Ajmal KTV — High Court Advocate &amp; Legal Consultant: </span>
             <span className="block text-white font-normal">
               Your Legal Matters,
             </span>
@@ -197,6 +198,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenConsultation, onOpenVideo }) =
               </div>
 
               <h1 className="font-editorial text-center lg:text-left text-4xl sm:text-5xl lg:text-[44px] xl:text-[50px] leading-[1.14] tracking-tight text-white mb-3.5 font-normal">
+                <span className="sr-only">Adv. Muhammad Ajmal KTV — High Court Advocate &amp; Legal Consultant: </span>
                 Legal Strategy for <br />
                 <span className="italic font-editorial text-[#D6AD69] font-normal">
                   Real Solutions.

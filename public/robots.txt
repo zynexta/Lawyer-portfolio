@@ -1,0 +1,16 @@
+# robots.txt for https://ajmalktv.in
+# Technical SEO: Crawl & Indexing Directives
+
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /og-image.jpg
+Allow: /favicon.svg
+
+# Disallow private/internal development assets and scripts
+Disallow: /scripts/
+Disallow: /api/
+Disallow: /*.json$
+
+# Official XML Sitemap
+Sitemap: https://ajmalktv.in/sitemap.xml

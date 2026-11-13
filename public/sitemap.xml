@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://ajmalktv.in/</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://ajmalktv.in/og-image.jpg</image:loc>
+      <image:title>Adv. Muhammad Ajmal KTV — High Court Advocate &amp; Legal Consultant</image:title>
+      <image:caption>Advocate Muhammad Ajmal KTV practicing at High Court of Kerala, Ernakulam</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://ajmalktv.in/advocate-desk-portrait.jpg</image:loc>
+      <image:title>Adv. Muhammad Ajmal KTV in Law Chamber</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://ajmalktv.in/#practice-areas</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ajmalktv.in/#about</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ajmalktv.in/#cases</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://ajmalktv.in/#insights</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ajmalktv.in/#contact</loc>
+    <lastmod>2026-11-13</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+</urlset>

@@ -195,19 +195,21 @@ export const Footer: React.FC<FooterProps> = ({
             <h3 className="font-editorial text-xl text-white font-medium mb-5">
               Quick Links
             </h3>
-            <ul className="space-y-3 text-xs sm:text-[13px] font-sans text-neutral-300">
-              {navLinks.map((link) => (
-                <li key={link.label}>
-                  <a
-                    href={link.href}
-                    onClick={(e) => handleNavClick(e, link.href)}
-                    className="hover:text-[#D6AD69] transition-colors inline-block py-0.5"
-                  >
-                    {link.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <nav aria-label="Footer Quick Links" className="w-full">
+              <ul className="space-y-3 text-xs sm:text-[13px] font-sans text-neutral-300">
+                {navLinks.map((link) => (
+                  <li key={link.label}>
+                    <a
+                      href={link.href}
+                      onClick={(e) => handleNavClick(e, link.href)}
+                      className="hover:text-[#D6AD69] transition-colors inline-block py-0.5"
+                    >
+                      {link.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </nav>
           </div>
 
           {/* Column 3 – Get in Touch */}
@@ -357,7 +359,7 @@ export const Footer: React.FC<FooterProps> = ({
                     transition={{ duration: 0.22 }}
                     className="overflow-hidden px-4 pb-3 pt-1 border-t border-[#D6AD69]/15"
                   >
-                    <div className="grid grid-cols-2 gap-2 text-[11.5px] sm:text-xs font-sans text-neutral-300">
+                    <nav aria-label="Mobile Footer Quick Links" className="grid grid-cols-2 gap-2 text-[11.5px] sm:text-xs font-sans text-neutral-300">
                       {navLinks.map((link) => (
                         <a
                           key={link.label}
@@ -368,7 +370,7 @@ export const Footer: React.FC<FooterProps> = ({
                           {link.label}
                         </a>
                       ))}
-                    </div>
+                    </nav>
                   </motion.div>
                 )}
               </AnimatePresence>
