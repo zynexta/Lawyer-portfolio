@@ -69,7 +69,7 @@ export const AboutModal: React.FC<AboutModalProps> = ({
               Adv. Muhammad Ajmal KTV
             </h3>
             <p className="text-xs font-sans text-neutral-600 mt-0.5">
-              Advocate • High Court of Kerala
+              Advocate
             </p>
           </div>
         </div>

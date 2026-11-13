@@ -85,7 +85,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenAboutModal }) 
               {/* Overlapping Dark Green Designation Badge */}
               <div className="absolute -bottom-3 left-1/2 -translate-x-1/2 bg-[#00241E] text-white px-3.5 sm:px-4 py-1 sm:py-1.5 rounded-full text-[10px] sm:text-xs font-sans font-semibold tracking-wider uppercase border border-[#D6AD69]/60 shadow-md flex items-center gap-1.5 whitespace-nowrap">
                 <Landmark className="w-3.5 h-3.5 text-[#D6AD69]" />
-                <span>Advocate, High Court</span>
+                <span>Advocate</span>
               </div>
             </div>
           </motion.div>
