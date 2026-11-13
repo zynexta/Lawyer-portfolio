@@ -234,11 +234,11 @@ export const Footer: React.FC<FooterProps> = ({
               </a>
 
               <a
-                href="mailto:contact@ajmalktv.in"
+                href="mailto:advmuhammadajmal128@gmail.com"
                 className="flex items-center gap-3 hover:text-[#D6AD69] transition-colors group"
               >
                 <Mail className="w-4 h-4 text-[#D6AD69] shrink-0 group-hover:scale-110 transition-transform" />
-                <span>contact@ajmalktv.in</span>
+                <span>advmuhammadajmal128@gmail.com</span>
               </a>
 
               <div className="flex items-start gap-3 text-neutral-300/90">
@@ -450,11 +450,11 @@ export const Footer: React.FC<FooterProps> = ({
               </a>
 
               <a
-                href="mailto:contact@ajmalktv.in"
+                href="mailto:advmuhammadajmal128@gmail.com"
                 className="flex items-center gap-2.5 hover:text-[#D6AD69] transition-colors"
               >
                 <Mail className="w-3.5 h-3.5 text-[#D6AD69] shrink-0" />
-                <span>contact@ajmalktv.in</span>
+                <span>advmuhammadajmal128@gmail.com</span>
               </a>
 
               <div className="flex items-start gap-2.5 text-neutral-300/90">
@@ -585,7 +585,7 @@ export const Footer: React.FC<FooterProps> = ({
                       <strong>Confidentiality:</strong> No information shared with our chambers is disclosed, rented, or transferred to third parties without prior written client consent, except as mandated by court order or applicable law.
                     </p>
                     <p>
-                      For any privacy-related inquiries, reach us at <a href="mailto:contact@ajmalktv.in" className="text-[#D6AD69] underline">contact@ajmalktv.in</a>.
+                      For any privacy-related inquiries, reach us at <a href="mailto:advmuhammadajmal128@gmail.com" className="text-[#D6AD69] underline">advmuhammadajmal128@gmail.com</a>.
                     </p>
                   </div>
                 </div>

@@ -14,7 +14,7 @@ export const AboutSection: React.FC<AboutSectionProps> = ({ onOpenAboutModal }) 
       icon: GraduationCap,
     },
     {
-      title: 'Practicing at the High Court',
+      title: 'High Court and District Courts',
       subtitle: 'Focused on diverse legal matters',
       icon: Landmark,
     },

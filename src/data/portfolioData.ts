@@ -168,7 +168,7 @@ export const credentialsData = [
     icon: 'graduation-cap',
   },
   {
-    title: 'Practicing at the High Court',
+    title: 'High Court and District Courts',
     description: 'Focused on diverse legal matters',
     icon: 'landmark',
   },
